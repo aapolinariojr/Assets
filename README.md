@@ -10,9 +10,7 @@ Aqui voce poderá encontrar todos arquivos necessários para rodar os códigos e
 
 Esse repositório poderá ser atualizado ao longo do semestre para acrescentar novos Assets para as atividades de Lab e/ou trabalhos. 
 
-```
-Importante:   Para que os códigos dos Labs encontrem esse repositório voce deve ajustar a sua localização de acordo com 
-              de acordo com o ambiente que voce vai utilizar: VSCode Live Server, Python Web Server, Apache, etc. 
-              Consulte a documentação específica do seu servidor web e em caso de dúvidas consulte seu professor buscando
-              auxílio. 
-``` 
+##Importante:   
+
+Para que os códigos dos Labs encontrem esse repositório voce deve ajustar a sua localização de acordo com o servidor *web* que voce vai utilizar: *VSCode Live Server*, *Python Web Server*, *Apache*, etc. 
+Consulte a documentação específica do seu servidor *web* e em caso de dúvidas consulte seu professor buscando auxílio.
