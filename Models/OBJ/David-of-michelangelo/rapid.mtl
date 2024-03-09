@@ -1,0 +1,5 @@
+newmtl material_0
+map_bump material0_normal.jpg
+norm material0_normal.jpg
+Kd 1 1 1
+occlusion material0_occlusion.jpg
