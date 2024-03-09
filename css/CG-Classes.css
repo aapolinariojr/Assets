@@ -1,0 +1,92 @@
+<stile> 
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  position: relative;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+iframe {
+  border:none;
+  height: 500px; 
+  width: 100%;
+  margin: 0;
+}
+
+
+/* Style the header */
+.header {
+  background-color: #cccccc;
+  padding: 30px;
+  text-align: left;
+  font-size: 18px;
+}
+
+/* Container for flexboxes */
+.row {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Create three unequal columns that sits next to each other */
+.column {
+  padding: 10px;
+  height: 600px; /* Should be removed. Only for demonstration */
+  background-color: #FFFFFF;
+}
+
+/* Left and right column */
+.column.side {
+   -webkit-flex: 1;
+   -ms-flex: 1;
+   flex: 1;
+}
+
+/* Middle column */
+.column.middle {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #cccccc;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+</style>

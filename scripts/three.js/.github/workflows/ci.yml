@@ -1,0 +1,102 @@
+name: CI
+
+on:
+  pull_request:
+    paths-ignore:
+      - 'build/**'
+      - 'docs/**'
+      - 'files/**'
+  push:
+    paths-ignore:
+      - 'build/**'
+      - 'docs/**'
+      - 'files/**'
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Lint testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3
+      - name: Install Node
+        uses: actions/setup-node@e33196f7422957bea03ed53f6fbb155025ffc7b8 # v3
+        with:
+          node-version: 18
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+
+      - name: === Lint testing ===
+        run: npm run lint
+
+  unit:
+    name: Unit testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3
+      - name: Install Node
+        uses: actions/setup-node@e33196f7422957bea03ed53f6fbb155025ffc7b8 # v3
+        with:
+          node-version: 18
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+
+      - name: === Unit testing ===
+        run: npm run test-unit
+
+  e2e:
+    name: E2E testing
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ windows-latest, ubuntu-latest, macos-latest ]
+        CI: [ 0, 1, 2, 3 ]
+    env:
+      CI: ${{ matrix.CI }}
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3
+      - name: Install Node
+        uses: actions/setup-node@e33196f7422957bea03ed53f6fbb155025ffc7b8 # v3
+        with:
+          node-version: 18
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+
+      - name: === E2E testing ===
+        run: npm run test-e2e
+      - name: Upload output screenshots
+        uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce # v3
+        if: always()
+        with:
+          name: Output screenshots
+          path: test/e2e/output-screenshots
+          if-no-files-found: ignore
+
+  e2e-cov:
+    name: Examples ready for release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3
+      - name: Install Node
+        uses: actions/setup-node@e33196f7422957bea03ed53f6fbb155025ffc7b8 # v3
+        with:
+          node-version: 18
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+
+      - name: === Examples ready for release ===
+        run: npm run test-e2e-cov

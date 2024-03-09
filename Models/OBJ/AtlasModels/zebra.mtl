@@ -1,0 +1,7 @@
+newmtl MAT_F42C3C
+	 Ka 0.117647 0.117647 0.117647
+	 Kd 0.752941 0.752941 0.752941
+	 Ks 0.752941 0.752941 0.752941
+	 illum 4.59083e-304
+	 Ns 8
+	 map_Kd ./textures/zebra-atlas.jpg

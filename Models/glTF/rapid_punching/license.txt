@@ -1,0 +1,11 @@
+Model Information:
+* title:	Rapid Punching Animation
+* source:	https://sketchfab.com/3d-models/rapid-punching-animation-898c066dc84b4fe7b19fa2f40f4fd145
+* author:	BPoole (https://sketchfab.com/BPoole)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Rapid Punching Animation" (https://sketchfab.com/3d-models/rapid-punching-animation-898c066dc84b4fe7b19fa2f40f4fd145) by BPoole (https://sketchfab.com/BPoole) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
