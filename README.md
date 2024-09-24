@@ -1,4 +1,4 @@
-# Assets da disciplina MATA65 - 2024.1
+# Assets da disciplina MATA65
 
 Aqui voce poderá encontrar todos arquivos necessários para rodar os códigos exemplo dos Labs. Temos:
 
