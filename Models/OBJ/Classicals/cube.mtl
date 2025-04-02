@@ -1,0 +1,7 @@
+newmtl pattern
+illum 4
+Kd 1.0 1.0 1.0
+Ka 0.2 0.2 0.2
+Ks 0.0 0.0 0.0
+Ns 10.0
+map_Kd ash_uvgrid01.jpg
