@@ -1,0 +1,24 @@
+{
+  "name": "@aapolinariojr/assets",
+  "version": "1.0.0",
+  "description": "Assets da disciplina MATA65",
+   "files": [
+    "Models/",
+    "Textures/",
+    "Sounds/"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aapolinariojr/Assets.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/aapolinariojr/Assets/issues"
+  },
+  "homepage": "https://github.com/aapolinariojr/Assets#readme"
+}
